@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#128540&#x1F600&#x1F601&#x1F602</title>
+
+</head>
+<body>
+
+    <span style="font-size:100px;">&#128540&#x1F600&#x1F601&#x1F602</span>
+    <table id="myTable" style="margin:0 auto; width: 50%;">
+        
+        <tr>
+            <th>key</th>
+            <th>value</th>
+        </tr>        
+        <tr>
+            <td id="myKey"></td>
+            <td id="myValue"></td>
+        </tr>
+    </table>
+
+
+    <script>
+        // php 
+        // 's1'=>'amy'
+        let myObj = {
+            's1': 'amy',
+            's2': 'bob',
+            's3': 'cat',
+        }
+        console.log('myObj',myObj);
+        console.log('myObj',myObj['s1']);
+        console.log('myObj["s1"]',myObj['s1']);
+        console.log('myObj.s1',myObj.s1);
+        
+        let myTable = document.getElementById('table');
+        let myKey = document.getElementById('myKey');
+        let myValue = document.getElementById('myValue');
+
+        myObj.forEach(function(value,key){
+            console.log(key);
+            myKey.innerText=key;
+            myValue.innerText=value;
+
+        });
+
+
+    </script>
+    
+</body>
+</html>
