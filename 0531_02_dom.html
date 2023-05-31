@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            margin: auto;
+            width: 50%;
+        }
+        table,td,th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>a heading</h1>
+    <a href="">link text</a>
+
+
+    <!-- innerText vs innerHtml -->
+    <div id="myDiv"></div>
+    <table id="myTable">
+        <!-- <tr>
+            <td>123</td>
+            <td>456</td>
+            <td>798</td>
+        </tr> -->
+    </table>
+
+
+
+    <script>
+        const myDiv = document.getElementById('myDiv');
+        
+
+     
+
+        // innerText 純文字
+        // myDiv.innerText = 'hello';
+        // innerHtml
+        // myDiv.innerHTML = '<h1>hello</h1>';
+        let myString = '';
+        myString += '<h1>hello</h1>';
+        myString += '<h1>hello</h1>';
+        myString += '<h1>hello</h1>';
+        myString += '<h1>hello</h1>';
+        myString += '<h1>hello</h1>';
+        console.log('myString',myString);
+
+        myDiv.innerHTML = myString ;
+
+        const myTable = document.getElementById('myTable');
+        myTable.innerHTML = `
+        <tr>
+            <td>123</td>
+            <td>456</td>
+            <td>798</td>
+        </tr> 
+        `;
+        let data = '<tr>';
+        data +='<td>123</td>';
+        data +='<td>456</td>';
+        data +='<td>798</td>';
+        data +='</tr>';
+        console.log('data',data);
+        myTable.innerHTML = data ; 
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

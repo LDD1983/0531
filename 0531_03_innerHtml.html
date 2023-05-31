@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#128540innerHTML</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table,td,th{
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <span style="font-size: 10px;">&#128540&#x1F600&#x1F601&#x1F602</span>
+    <br>
+    <table id="myTable" style="width: 50%;">
+        
+       
+    </table>
+
+
+    <script>
+        // php 
+        // 's1'=>'amy' =  js object
+//////////// 宣告 object { }  //////////////////////        
+        let myObj = {
+            's1': 'amy',
+            's2': 'bob',
+            's3': 'cat',
+        }
+
+        console.log('myObj',myObj);
+        console.log('myObj',myObj['s1']);
+        console.log('myObj["s1"]',myObj['s1']);
+        console.log('myObj.s1',myObj.s1);
+        
+        const myTable = document.getElementById('myTable');
+
+////////////////////////////直接綁定每個td//////////////////////////////////////
+        // let td11 = document.getElementById('td11');
+        // let td12 = document.getElementById('td12');
+        // let td21 = document.getElementById('td21');
+        // let td22 = document.getElementById('td22');
+        // let td31 = document.getElementById('td31');
+        // let td32 = document.getElementById('td32');
+      
+      
+//////////////////////////直接取代每個變數的innerText //////////////////////////////////////
+        // td11.innerText = 's1';
+        // td12.innerText = myObj['s1'];
+        // td21.innerText = 's2';
+        // td22.innerText = myObj['s2'];
+        // td31.innerText = 's3';
+        // td32.innerText = myObj['s3'];
+
+
+//////////////////直接用table下面的Html cade取代myTable的innerHTML //////////////////////////////////////
+        // myTable.innerHTML = `
+        // <tr>
+        //     <th>Numder</th>
+        //     <th>Name</th>
+        // </tr>        
+        // <tr>
+        //     <td id="td11">data1</td>
+        //     <td id="td12">data2</td>
+        // </tr>
+        // <tr>
+        //     <td id="td21">data3</td>
+        //     <td id="td22">data4</td>
+        // </tr>
+        // <tr>
+        //     <td id="td31">data5</td>
+        //     <td id="td32">data6</td>
+        // </tr>
+        // `;
+
+///////////////宣告myString 的字串沒有在 myObj 裡面的
+        let myString = `
+            <tr>
+                <th>Numder</th>
+                <th>Name</th>
+            </tr>   
+        `;
+      
+////////////// for in loop 抓object key /////////////
+        // for (const key in myObj){
+        //         const value = myObj[key];
+        //         console.log(key,value);
+        //         myString += `
+        //         <tr>
+        //             <td>${key}</td>
+        //             <td>${value}</td>
+        //         </tr>`;                
+        // }
+        // console.log('myString',myString);
+
+        // myTable.innerHTML = myString;
+
+///////////////// myArr[myObj] //////////////////
+
+        let myArr = [
+                    {
+                        'number' : 's1',
+                        'name' : 'amy',
+                        'mobile' : '0911-111-111'
+                    },
+                    {
+                        'number' : 's2',
+                        'name': 'bob',
+                        'mobile' :'0922-222-222'
+                    },
+                    {
+                        'number' : 's3',
+                        'name':'cat',
+                        'mobile':'0933-333-333'
+                    }
+                ]
+        console.log(myArr);
+        console.log(myObj);
+        console.log('typeof myArr ',typeof myArr);
+        console.log('typeof myObj ',typeof myObj);
+        console.log('Array.isArray(myArr)',Array.isArray(myArr));
+        console.log('Array.isArray(myObj)',Array.isArray(myObj));
+      
+        console.log('myArr[0]',myArr[0]);
+
+        myArr.forEach(myValue => {
+            console.log(myValue.number);
+            console.log(myValue.name);
+            console.log(myValue.mobile);
+
+
+        
+            
+        });
+
+
+
+      
+      
+
+       
+       
+        
+       
+       
+        
+
+
+       
+
+
+
+
+
+        // Object.values(myObj).forEach(element => {
+        //     myValue.innerText = element;
+        // });
+        // Object.keys(myObj).forEach(element => {
+        //     myKey.innerText = element;
+        // });
+        
+
+
+    </script>
+    
+</body>
+</html>

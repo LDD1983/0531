@@ -5,20 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&#128540&#x1F600&#x1F601&#x1F602</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table,td,th{
+            border: 1px solid black;
+        }
+    </style>
 
 </head>
 <body>
 
-    <span style="font-size:100px;">&#128540&#x1F600&#x1F601&#x1F602</span>
-    <table id="myTable" style="margin:0 auto; width: 50%;">
+    <span style="font-size: 100px;">&#128540&#x1F600&#x1F601&#x1F602</span>
+    <br>
+    <table id="myTable" style="width: 50%;">
         
         <tr>
             <th>key</th>
             <th>value</th>
         </tr>        
         <tr>
-            <td id="myKey"></td>
-            <td id="myValue"></td>
+            <td id="td11">11</td>
+            <td id="td12">12</td>
+        </tr>
+        <tr>
+            <td id="td21"></td>
+            <td id="td22"></td>
+        </tr>
+        <tr>
+            <td id="td31"></td>
+            <td id="td32"></td>
         </tr>
     </table>
 
@@ -37,15 +54,46 @@
         console.log('myObj.s1',myObj.s1);
         
         let myTable = document.getElementById('table');
-        let myKey = document.getElementById('myKey');
-        let myValue = document.getElementById('myValue');
+        let td11 = document.getElementById('td11');
+        let td12 = document.getElementById('td12');
+        let td21 = document.getElementById('td21');
+        let td22 = document.getElementById('td22');
+        let td31 = document.getElementById('td31');
+        let td32 = document.getElementById('td32');
+      
+      
 
-        myObj.forEach(function(value,key){
-            console.log(key);
-            myKey.innerText=key;
-            myValue.innerText=value;
+        td11.innerText = 's1';
+        td12.innerText = myObj['s1'];
+        td21.innerText = 's2';
+        td22.innerText = myObj['s2'];
+        td31.innerText = 's3';
+        td32.innerText = myObj['s3'];
 
-        });
+      
+      
+
+       
+       
+        
+       
+       
+        
+
+
+       
+
+
+
+
+
+        // Object.values(myObj).forEach(element => {
+        //     myValue.innerText = element;
+        // });
+        // Object.keys(myObj).forEach(element => {
+        //     myKey.innerText = element;
+        // });
+        
 
 
     </script>

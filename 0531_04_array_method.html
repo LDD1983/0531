@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#128540_method</title>
+</head>
+
+<body>
+    <span style="font-size: 100px;">
+        &#x1F600
+        &#x1F601
+        &#x1F602
+        &#x1F603
+        &#x1F604
+        
+
+    </span>
+<!-- ////////你才object , 你全家都object//////////// -->
+    <h2>你才object , 你全家都object</h2>
+   
+        
+   
+
+
+
+    <script>
+        // js array method
+        let myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        myArr[15] = 100;
+        console.log('myArr', myArr);
+
+        let sum = 0;
+        myArr.forEach(function (num, index) {
+            console.log(num, index);
+            sum += num;
+
+        });
+
+
+///////////// practice 1 let new array = myArr value x 2//////////////////////////////////////////// 
+        let myArrD = [];
+        myArr.forEach(function (num, index) {
+            console.log(num, index);
+            myArrD.push(num * 2);
+
+        });
+        console.log(myArrD);
+///////////////// if before value > 5 *3 //////
+        
+        myArrT = [];
+        myArr.forEach(function (num, index) {
+            console.log(num, index);
+            if (num > 5) {
+                myArrT.push(num * 3);
+
+            }
+            else {
+                myArrT.push(num * 2);
+            }
+
+        });
+        console.log('myArrT', myArrT);
+//////  array method /////////////////////////////////////
+// ///  myArr.map() //////////////////////////////////////
+        let mapArr = myArr.map(function(value,key){
+            return value *2
+        })
+        console.log('mapArr',mapArr);
+
+        // 發獎金 
+        let mySalary = [6,4,2,1,5,10,7,3,6]
+
+        console.log('mySalary',mySalary);
+
+        let myBonus = mySalary.map(function(salary,key){
+            if(salary <= 4){
+                return salary*2;
+            } else {
+               return 1 ;
+            }
+        });
+        console.log('myBonus',myBonus);
+
+
+    </script>
+</body>
+
+</html>
